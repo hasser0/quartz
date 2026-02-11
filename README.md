@@ -1,17 +1,18 @@
-# Quartz v4
+# Quartz
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+```bash
+$ docker build --tag quartz .
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+$ docker run --rm -it \
+    -p 8081:8081 \
+    -p 3001:3001 \
+    -v /home/hasser/learning/computers:/usr/src/app/content \
+    quartz
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+$ docker run --rm -it \
+    -p 8082:8082 \
+    -p 3002:3002 \
+    -v /home/hasser/learning/math:/usr/src/app/content \
+    quartz
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+```
